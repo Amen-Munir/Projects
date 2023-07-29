@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Java Documentation</title>
+    <link rel="stylesheet" href="C:\Users\HP\Desktop\Documentation\Documentation\style.css" />
+  </head>
+
+  <body>
+    <nav id="navbar">
+      <header>Jave Documentation</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Getting_Statred_With_Java">
+            Getting Statred With Java</a
+          >
+        </li>
+
+        <li>
+          <a class="nav-link" href="#Java_Entry_Point"> Java Entry Point</a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#Printing_to_the_cosole">
+            Printing to the cosole
+          </a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#Declaring_Function"> Declaring Function</a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#Object_Oriented_Programming">
+            Object Oriented Programming
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Java_Entry_Point">
+        <header>Getting Statred With Java</header>
+        <p>Steps in getting started</p>
+        <ol>
+          <li>Install Java</li>
+          <li>Install an IDE</li>
+          <li>Write your first program</li>
+        </ol>
+      </section>
+
+      <section class="main-section" id="Printing_to_the_cosole">
+        <header>Java Entry Point</header>
+        <p>The entry point to java application is the main function</p>
+        <p>
+          It is categorized by its (String[] args) as a parameter to the main
+          funct ion
+        </p>
+        <pre>
+                <code>
+                    puplic class MyMainFuction{
+                        public static void main(String[] args){
+                            /* Java main Fuction example */
+                            
+                    }
+                }
+                    
+                </code>
+            </pre>
+        <p>
+          As you can see the main function is declared with the keyword public,
+          static and void which is part of the object oriented programming
+          concept of Java Projects.
+        </p>
+        <p>The name of the project is therefore "MyMainFunction"</p>
+      </section>
+
+      <section class="main-section" id="Printing_to_the_cosole">
+        <header>Printing to the cosole</header>
+        <p>In order to prit to the console We can use System.out.println.</p>
+        <p>
+          I know, it is very long and cumbersome, but this is the way it's done.
+        </p>
+        <pre>
+            <code>      
+                puplic class MyMainFuction{
+                    public static void main(String[] args){
+                        /* Java main Fuction example */
+                        System.out.println("Hello World");
+                }
+            }
+          
+            </code>
+        </pre>
+        <p>
+          In this example we are printing the string "Hello World" to the
+          console when we run the program.
+        </p>
+      </section>
+
+      <section class="main-section" id="Declaring_Function">
+        <header>Declaring Function</header>
+        <p>Functions are actually called Methods in Java</p>
+        <p>
+          Functions are actually called methods in Java. Here is an example of
+          hoe to declare a method in Java.
+        </p>
+        <img
+          src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/02/example-of-java-method-declaration.jpg"
+          alt="java-method-img"
+          class="image"
+        />
+        <p>
+            Some copiale code: 
+            <pre>
+                <code>
+                    
+                        public static void myFuction(String name, int age){
+                           
+                            //function code
+                    }
+                </code>
+            </pre>
+        </p>
+      </section>
+      <section class="main-section" id="Object_Oriented_Programmin">
+        <header>Object Oriented Programming</header>
+        <p>Java is known as an Object Oriented programming language.</p>
+        <p> 
+            This means that it is easy to represent real life objects in code by using classes and encapsulation.
+        </p>
+        <p>
+            An example of this might be a Student class that has a name and age property.
+        </p>
+        <pre>
+          <code>
+            public class Student{
+                //Student properties
+                private String name;
+                private int age;
+
+                //Constructor
+                public Student(String name, int age){
+                    this.name = name;
+                    this.age = age;
+                }
+                
+                //Getter method 
+                public String getName(){
+                    return this.name;
+                }
+                 
+                public int getAge(){
+                    return this.age;
+                }
+
+                //setter method
+                public void setName(String name){
+                    this.name = name;
+                }
+            }
+          </code>
+        </pre>
+        <p>
+            We use this class by doing the following:
+        </p>
+        <pre>
+            <code>
+                Student student = new Student("John", 20);
+                student.setName("Jane");
+                string name = student.getName();
+            </code>
+        </pre>
+      </section>
+      <footer><p>Documnetation brought to you by Bachelor's in Computer Science Student</p>
+    </footer>
+    </main>
+  </body>
+</html>
