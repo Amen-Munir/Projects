@@ -2,22 +2,22 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Java Documentation</title>
+    <title>C++ Documentation</title>
     <link rel="stylesheet" href="C:\Users\HP\Desktop\Documentation\Documentation\style.css" />
   </head>
 
   <body>
     <nav id="navbar">
-      <header>Jave Documentation</header>
+      <header>C++ Documentation</header>
       <ul>
         <li>
-          <a class="nav-link" href="#Getting_Statred_With_Java">
-            Getting Statred With Java</a
+          <a class="nav-link" href="#Getting_Statred_With_C++">
+            Getting Started With C++ </a
           >
         </li>
 
         <li>
-          <a class="nav-link" href="#Java_Entry_Point"> Java Entry Point</a>
+          <a class="nav-link" href="#C++_Entry_Point"> C++ Entry Point</a>
         </li>
 
         <li>
@@ -26,6 +26,17 @@
           </a>
         </li>
 
+        <li>
+          <a class="nav-link" href="#C++_comments"> C++ Comments</a>
+        </li>
+        
+        <li>
+          <a class="nav-link" href="#dataTypes"> C++ Data Types</a>
+        </li>
+
+        <li>
+          <a class="nav-link" href="#variables"> C++ Variables</a>
+        </li>
         <li>
           <a class="nav-link" href="#Declaring_Function"> Declaring Function</a>
         </li>
@@ -37,80 +48,207 @@
         </li>
       </ul>
     </nav>
+
+
     <main id="main-doc">
-      <section class="main-section" id="Java_Entry_Point">
-        <header>Getting Statred With Java</header>
+      <section class="main-section" id="Getting_Statred_With_C++">
+        <header>Getting Statred With C++</header>
         <p>Steps in getting started</p>
         <ol>
-          <li>Install Java</li>
+          <li>Install Mingw Compiler </li>
           <li>Install an IDE</li>
-          <li>Write your first program</li>
+          <li> Setup your IDE</li>
+          <li>Write your first program 
+           
+          </li>
         </ol>
       </section>
 
-      <section class="main-section" id="Printing_to_the_cosole">
-        <header>Java Entry Point</header>
-        <p>The entry point to java application is the main function</p>
+      <section class="main-section" id="C++_Entry_Point">
+        <header>C++ Entry Point</header>
+        <p>The entry point to C++ application is the main function</p>
         <p>
-          It is categorized by its (String[] args) as a parameter to the main
-          funct ion
+          The main function is the start of the program in c++. ontrol Shifts to the main function as sson as you press run and executes all the code line by line.
+         
         </p>
         <pre>
-                <code>
-                    puplic class MyMainFuction{
-                        public static void main(String[] args){
-                            /* Java main Fuction example */
-                            
-                    }
-                }
-                    
-                </code>
-            </pre>
+          <code>
+            #include <iostream>
+            using namespace std;
+            int main(){
+              cout << "Hello World";
+              return 0;
+            }
+          </code>
+        </pre>
         <p>
-          As you can see the main function is declared with the keyword public,
-          static and void which is part of the object oriented programming
-          concept of Java Projects.
+          As you can see the main function is declared with the return type of integer. 
+         And the paramter list is empty. The main funtion can also e written with a return type of void 
+         but the normal practice is to use it with the return type of integer.
+          
         </p>
-        <p>The name of the project is therefore "MyMainFunction"</p>
+        <p>The name of the function is therefore "int main()"</p>
       </section>
 
       <section class="main-section" id="Printing_to_the_cosole">
         <header>Printing to the cosole</header>
-        <p>In order to prit to the console We can use System.out.println.</p>
+        <p>In order to prit to the console, we can use the cout statements as shown in the above code as well.</p>
         <p>
-          I know, it is very long and cumbersome, but this is the way it's done.
+          The cout statement is used to print to the console. It is a part of the iostream library. 
+          The cout statement is used with the insertion operator (<<) and the text to be printed is enclosed in double quotes.
         </p>
         <pre>
             <code>      
-                puplic class MyMainFuction{
-                    public static void main(String[] args){
-                        /* Java main Fuction example */
-                        System.out.println("Hello World");
-                }
-            }
-          
+              int main(){
+                cout << "My first line of code";
+                return 0;
+              }
             </code>
         </pre>
         <p>
-          In this example we are printing the string "Hello World" to the
-          console when we run the program.
+          In this example we are printing the string "My first line of code" to the
+          console when we run the program. 
         </p>
+        <p>
+          The cout statement can also be used to print variables to the console.
+          Anything inside the double quotes will be printed as it is whereas to print variables to the 
+          console you simply write in the variable name.
+        </p>
+
+      </section>
+
+      <section class="main-section" id="C++_comments">
+        <header>C++ Comments</header>
+        <p>Comments can be used to explain C++ code, and to make it more readable. It can also be used to prevent execution when testing alternative code. Comments can be singled-lined or multi-lined.d</p>
+        <p><center><h1> Singled-lined Comments </h1> </center>  </p>
+        <p>
+          Single line comments start with two forward slashes (//).
+          Any text between // and the end of the line is ignored by the compiler (will not be executed).</p>
+        <pre>
+            Example:
+          <code>
+            // This is a comment
+            cout << "Hello World";
+          </code>
+        </pre>
+
+        <p><center><h1> Multiple-lined Comments </h1> </center>  </p>
+        <p>
+          Multi-line comments start with /* and ends with */.
+
+          Any text between /* and */ will be ignored by the compiler:.</p>
+        <pre>
+            Example:
+          <code>
+            /* The code below will print the words Hello World!
+            to the screen, and it is amazing */
+            cout << "Hello World!";
+          </code>
+        </pre>
+      </section>
+
+      <section class="main-section" id="dataTypes">
+        <header>Data Types in C++</header>
+        <p>
+          In C++, there are different types of variables (defined with different keywords), for example:
+<ul>
+
+  <br></br>
+  <li> int - stores integers (whole numbers), without decimals, such as 123 or -123</li>
+  <li>double - stores floating point numbers, with decimals, such as 19.99 or -19.99</li>
+    <li>char - stores single characters, such as 'a' or 'B'. Char values are surrounded by single quotes</li>
+      <li>string - stores text, such as "Hello World". String values are surrounded by double quotes</li>
+        <li>bool - stores values with two states: true or false</li>
+</ul>
+        </p>
+        <p>
+          <br></br>
+          <br></br>
+        </p>
+        <img
+          src="https://www.sitesbay.com/cpp/images/data-type-in-cpp.jpg"
+          alt="c++-dataType-img"
+          class="image"
+        />
+        <p>
+            Some copiable code: 
+            <pre>
+                <code>
+                  int main(){
+                    int a = 5;
+                    double b = 5.5;
+                    char c = 'A';
+                    string d = "Hello World";
+                    bool e = true;
+                  }
+
+                        
+                    
+                </code>
+            </pre>
+        </p>
+      </section>
+     
+
+      <section class="main-section" id="variables">
+        <header>C++ Variables </header>
+        <p><h2>Declaring (Creating) Variables</h2> <br></br>
+          To create a variable, specify the type and assign it a value:
+        </p>
+        <pre>
+          <h3>Syntax:</h3>
+          <code>
+            type variable = value;
+          </code>
+
+        </pre>
+        <p>
+          Where type is one of C++ types (such as int), and variableName is the 
+          name of the variable (such as x or myName). The equal sign is used to 
+          assign values to the variable.</p>
+        </p>
+        <p><br>To create a variable that should store a number, look at the following example:</br></p>
+        <pre>
+          <h3>Syntax:</h3>
+          <code>
+            int myNum = 15;
+            cout << myNum;
+          </code>
+
+        </pre>
+
+        <p><br>Note that if you assign a new value to an existing variable, it will overwrite the previous value:</br></p>
+        <pre>
+          <h3>Syntax:</h3>
+          <code>
+            int myNum = 15;  // myNum is 15
+            myNum = 10;  // Now myNum is 10
+            cout << myNum;  // Outputs 10
+          </code>
+
+        </pre>
       </section>
 
       <section class="main-section" id="Declaring_Function">
+       
         <header>Declaring Function</header>
-        <p>Functions are actually called Methods in Java</p>
+        <br></br>
+        <p>Functions are actually called Methods in C++.</p>
         <p>
-          Functions are actually called methods in Java. Here is an example of
-          hoe to declare a method in Java.
+          A function is a block of code which only runs when it is called.
+
+          <br></br>You can pass data, known as parameters, into a function.
+
+          <br></br>Functions are used to perform certain actions, and they are important for reusing code: Define the code once, and use it many times.
         </p>
+        <br></br>
         <img
-          src="https://techvidvan.com/tutorials/wp-content/uploads/sites/2/2020/02/example-of-java-method-declaration.jpg"
+          src="https://4.bp.blogspot.com/-KrDSb9PB4uM/VXbBkXYtPxI/AAAAAAAAAKk/mFmhFmNS8X4/s1600/C-Function-Definition.jpg"
           alt="java-method-img"
           class="image"
         />
         <p>
-            Some copiale code: 
+            Some copiable code: 
             <pre>
                 <code>
                     
@@ -122,9 +260,11 @@
             </pre>
         </p>
       </section>
-      <section class="main-section" id="Object_Oriented_Programmin">
+
+
+      <section class="main-section" id="Object_Oriented_Programming">
         <header>Object Oriented Programming</header>
-        <p>Java is known as an Object Oriented programming language.</p>
+        <p>C++ is known as an Object Oriented programming language.</p>
         <p> 
             This means that it is easy to represent real life objects in code by using classes and encapsulation.
         </p>
@@ -135,27 +275,29 @@
           <code>
             public class Student{
                 //Student properties
-                private String name;
-                private int age;
+                private :
+                string name;
+                 int age;
 
                 //Constructor
-                public Student(String name, int age){
-                    this.name = name;
-                    this.age = age;
+                public :
+                Student(String n, int a){
+                   name=n;
+                   age=a;
                 }
                 
                 //Getter method 
-                public String getName(){
-                    return this.name;
+                 string getName(){
+                    return name;
                 }
                  
-                public int getAge(){
-                    return this.age;
+                 int getAge(){
+                    return age;
                 }
 
                 //setter method
-                public void setName(String name){
-                    this.name = name;
+                void setName(String n){
+                    name = n;
                 }
             }
           </code>
